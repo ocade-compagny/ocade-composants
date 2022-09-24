@@ -7,5 +7,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Build and deploy to master branch
-      run: echo ls && npm run build && npm run deploy-storybook
+    - name: show folder
+      run: ls
+
