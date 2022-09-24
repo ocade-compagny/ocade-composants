@@ -14,11 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        run: npm i
-        run: |
+        uses: actions/setup-node@v3
+      - env:
+        GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+      - run: npm i
+      - run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-        run: npm run build-storybook --if-present
-        run: npm run deploy-storybook
-        env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+      - run: npm run build-storybook --if-present
+      - run: npm run deploy-storybook
