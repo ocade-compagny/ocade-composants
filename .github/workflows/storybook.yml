@@ -1,4 +1,4 @@
-name: Deploy Storybook on Github Page
+name: Node.js CI
 
 on:
   push:
@@ -12,11 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📦 Install dépendences
-        run: npm i
-      # - name: 🧑‍🏭 Build Storybook Static
-      #   run: npm run build-storybook --if-present
-      # - name: 🚀 Deploy Storybook
-      #   run: npm run deploy-storybook
-      #   env:
-      #     GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+      - name: Use Node.js ${{ matrix.node-version }}
+      - run: npm i
+      - run: npm run build-storybook --if-present
+      - run: npm run deploy-storybook
