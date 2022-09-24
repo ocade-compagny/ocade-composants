@@ -15,3 +15,4 @@ jobs:
       env:
         ACCESS_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         BUILD_SCRIPT: npm install && npm run build-storybook
+
