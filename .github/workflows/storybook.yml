@@ -1,12 +1,10 @@
-// .github/workflows/storybook.yml
-
+name: Deploy Storybook
 on: 
   push:
     branches:
       - master
-      - paths: ["src/stories/**", "src/components/**"]
+    - paths: ["src/stories/**", "src/components/**"]
 
-name: Publish stories if changed
 
 jobs:
   build-and-deploy:
