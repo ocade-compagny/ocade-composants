@@ -1,6 +1,6 @@
 {
   "name": "@ocade-compagny/ocade-composants",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "Banque de composants by Ocade Compagny",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
