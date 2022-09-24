@@ -13,7 +13,7 @@
     "build-storybook": "build-storybook",
     "build": "rollup -c",
     "dev": "nodemon -e ts,tsx -w ./src -x npm run build",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages --out ocade-composants-static"
   },
   "keywords": [
     "Ocade Components"
