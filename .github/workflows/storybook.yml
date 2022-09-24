@@ -12,9 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Use Node.js ${{ matrix.node-version }}
-      - run: npm i
-      - run: npm run build-storybook --if-present
-      - run: npm run deploy-storybook
-      - env:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com'
+      - name: 📦 Install dépendences
+        run: npm i
+      - name: 🧑‍🏭 Build Storybook Static
+        run: npm run build-storybook --if-present
+      - name: 🚀 Deploy Storybook
+        run: npm run deploy-storybook
+        env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
