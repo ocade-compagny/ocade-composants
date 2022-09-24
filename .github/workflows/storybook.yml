@@ -16,4 +16,4 @@ jobs:
         ACCESS_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         BRANCH: master
         FOLDER: ocade-composants-static
-        BUILD_SCRIPT: npm install && npm run build-storybook
+        BUILD_SCRIPT: npm install && npm run deploy-storybook
