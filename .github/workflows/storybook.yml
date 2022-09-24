@@ -19,6 +19,6 @@ jobs:
           node-version: '16.x'
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
-      - run: npm ci
+      - run: npm i
       - run: npm run build --if-present
       - run: npm test
