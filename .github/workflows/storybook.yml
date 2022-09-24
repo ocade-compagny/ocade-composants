@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - name: Use Node.js ${{ matrix.node-version }}
-      - run: npm i
-      - run: npm run build-storybook --if-present
-      - run: npm run deploy-storybook
+        run: npm i
+        run: npm run build-storybook --if-present
+        run: npm run deploy-storybook
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
