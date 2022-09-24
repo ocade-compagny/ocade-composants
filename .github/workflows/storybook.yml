@@ -14,6 +14,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@2.0.3
       env:
         ACCESS_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        BRANCH: master
-        FOLDER: ocade-composants-static
         BUILD_SCRIPT: npm install && npm run build-storybook
