@@ -7,7 +7,7 @@
 # Ocade Composants
 [![Documentation](https://img.shields.io/badge/Documentation-Ocade Compoosants-blue.svg)](https://shields.io/)
 
-[![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/documentation-voir-green.svg)](https://shields.io/)
 
 # Package.json
 
