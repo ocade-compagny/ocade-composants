@@ -1,5 +1,7 @@
-# Bibliothèque de composants Ocade Components
-[Voir la documentation](https://ocade-compagny.github.io/ocade-components/)
+[![Ocade Composants](./readme/logo-ocade-composants.png)](https://ocade-compagny.github.io/ocade-composants/)
+
+# Ocade Composants
+[Documentation de la librairie](https://ocade-compagny.github.io/ocade-composants/)
 
 # Package.json
 
