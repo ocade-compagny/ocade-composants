@@ -1,4 +1,8 @@
-[![Ocade Composants](./readme/logo-ocade-composants-1.png)](https://ocade-compagny.github.io/ocade-composants/)
+<a href="https://ocade-compagny.github.io/ocade-composants/">
+  <p align="center">
+    <img src="./readme/logo-ocade-composants-1.png" />
+  </p>
+</a>
 
 # Ocade Composants
 [Documentation de la librairie](https://ocade-compagny.github.io/ocade-composants/)
