@@ -12,10 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
       - name: 📦 Install dépendences
         run: npm i
       - name: 🧑‍🏭 Build Storybook Static
