@@ -1,11 +1,8 @@
-name: Deploy Storybook
-on: 
+name: Deploy StoryBook
+on:
   push:
     branches:
       - master
-    - paths: ["src/stories/**", "src/components/**"]
-
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
