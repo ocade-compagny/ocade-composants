@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build and deploy to master branch
-      run: ls && run build && npm run deploy-storybook
+      run: echo ls && npm run build && npm run deploy-storybook
