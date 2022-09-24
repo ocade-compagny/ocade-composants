@@ -1,11 +1,11 @@
-<a href="https://ocade-compagny.github.io/ocade-composants/">
+<a href="https://ocade-compagny.github.io/ocade-composants/" title="Click pour voir la documentation">
   <p align="center">
     <img src="./readme/logo-ocade-composants-1.png" />
   </p>
 </a>
 
 # Ocade Composants
-[Documentation de la librairie](https://ocade-compagny.github.io/ocade-composants/)
+[![Documentation](https://img.shields.io/badge/Documentation-Ocade Compoosants-blue.svg)](https://shields.io/)
 
 # Package.json
 
