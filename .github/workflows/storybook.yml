@@ -18,8 +18,5 @@ jobs:
       - env:
         GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
       - run: npm i
-      - run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
       - run: npm run build-storybook --if-present
       - run: npm run deploy-storybook
