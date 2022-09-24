@@ -5,9 +5,18 @@
 </a>
 
 # Ocade Composants
-[![Documentation](https://img.shields.io/badge/Documentation-Ocade Compoosants-blue.svg)](https://shields.io/)
-
-[![Generic badge](https://img.shields.io/badge/documentation-voir-green.svg)](https://shields.io/)
+  
+  [![Build Status](https://travis-ci.org/ocade-compagny/ocade-composants.svg?branch=master)](https://travis-ci.org/ocade-compagny/ocade-composants)
+  [![Coverage Status](https://coveralls.io/repos/github/ocade-compagny/ocade-composants/badge.svg?branch=master)](https://coveralls.io/github/ocade-compagny/ocade-composants?branch=master)
+  [![npm version](https://badge.fury.io/js/ocade-composants.svg)](https://badge.fury.io/js/ocade-composants)
+  [![dependencies Status](https://david-dm.org/ocade-compagny/ocade-composants/status.svg)](https://david-dm.org/ocade-compagny/ocade-composants)
+  [![devDependencies Status](https://david-dm.org/ocade-compagny/ocade-composants/dev-status.svg)](https://david-dm.org/ocade-compagny/ocade-composants?type=dev)
+  [![peerDependencies Status](https://david-dm.org/ocade-compagny/ocade-composants/peer-status.svg)](https://david-dm.org/ocade-compagny/ocade-composants?type=peer)
+  [![Greenkeeper badge](https://badges.greenkeeper.io/ocade-compagny/ocade-composants.svg)](https://greenkeeper.io/)
+  [![Known Vulnerabilities](https://snyk.io/test/github/ocade-compagny/ocade-composants/badge.svg)](https://snyk.io/test/github/ocade-compagny/ocade-composants)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![GitHub issues](https://img.shields.io/github/issues/ocade-compagny/ocade-composants.svg)](
+[![Generic badge](https://img.shields.io/badge/documentation-voir-blue.svg)](https://ocade-compagny.github.io/ocade-composants/)
 
 # Package.json
 
