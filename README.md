@@ -7,6 +7,8 @@
 # Ocade Composants
 [![Documentation](https://img.shields.io/badge/Documentation-Ocade Compoosants-blue.svg)](https://shields.io/)
 
+[![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+
 # Package.json
 
 Différentes bonnes pratiques pour la gestion des paquets via npm.
