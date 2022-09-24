@@ -13,13 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
-      - name: Git config
-        run: |
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+      - run: npm i
+      - run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-      - name: Build and Deploy Storybook
-      - run: npm run build-storybook
+      - run: npm run build-storybook --if-present
       - run: npm run deploy-storybook
