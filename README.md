@@ -6,17 +6,17 @@
 
 # Ocade Composants
 
-[![Documentation](https://img.shields.io/badge/documentation-voir-blue.svg)](https://ocade-compagny.github.io/ocade-composants/)
+[![Documentation](https://img.shields.io/badge/explorer-documentation-blue.svg)](https://ocade-compagny.github.io/ocade-composants/)
 
 
 
 
-## Ocade Composants, qu'est-ce que c'est ?
+## Ocade Composants, c'est quoi ?
 [Ocade Composants](https://github.com/ocade-compagny/ocade-composants) est une bibliothèque de composants React. Elle est destinée à être utilisée dans les applications développées par [Ocade Compagny](https://github.com/ocade-compagny/create-ocade-system) mais peut être utilisée dans n'importe qu'elle project utilisant React.
 
 
 ## Installation 
-Pour installer cette bibliothèque de composants dans votre projet, vous devez l'installer via npm ou yarn.
+Vous pouvez installer cette bibliothèque via npm ou yarn.
 
 ```bash
 npm install @ocade-compagny/ocade-composants
@@ -41,8 +41,14 @@ const App = () => {
 }
 ```
 
+## Comment connaître les composants disponibles ?
+[![Documentation](https://img.shields.io/badge/explorer-documentation-blue.svg)](https://ocade-compagny.github.io/ocade-composants/)
+Cliquez sur le lien ci-dessus et vous arrivez sur la documentation de cette bibliothèque de composants. Vous y trouverez la liste des composants disponibles et leur utilisation.
+![Page Accueil](./readme/storybook-1.png)
+![Page doc du composant](./readme/storybook-1.png)
+
 ## Développement 
-Si vous souhaitez contribuer à cette bibliothèque de composants, vous pouvez cloner le projet dans votre dossier de travail. Voici les étapes à suivre pour réussir à développer la librarie.
+Si vous souhaitez contribuer à cette bibliothèque de composants, vous pouvez cloner le projet dans votre dossier de travail.
 
 1. Installer la bibliothèque @ocade-compagny/ocade-composants dans votre application
 ```bash
@@ -60,7 +66,7 @@ git clone git@github.com:ocade-compagny/ocade-composants.git
 git clone https://github.com/ocade-compagny/ocade-composants.git
 ```
 
-3. Faire pointer le package @ocade-compagny/ocade-composants vers le dossier de votre dépôt cloné. Dans le fichier package.json de votre application, modifier la ligne suivante:
+3. Faire pointer le package @ocade-compagny/ocade-composants vers le dossier du dépôt cloné. Dans le fichier package.json de votre application, modifier la ligne suivante:
 ```json
 "dependencies": {
   ...,
@@ -76,7 +82,7 @@ par
   ...,
 }
 ```
-où `ocade-composants` est le dossier de votre dépôt cloné.
+où `ocade-composants` est le dossier du dépôt cloné.
 
 2. Installer les dépendances de la bibliothèque @ocade-compagny/ocade-composants
 ```bash
@@ -88,15 +94,16 @@ Concraitement, vous pouvez maintenant développer dans le dossier cloné et lors
 npm run build
 ```
 
-### Nodemon pour vous aider
+### [Nodemon](https://www.npmjs.com/package/nodemon) pour vous aider
 Si vous souhaitez developper sans avoir à relancer la commande `npm run build` a chaque fois, vous pouvez lancer le serveur nodemon qui surveillera les changements pour vous
 ```
 npm run dev
 ```
 
-### Dans le cas où vous êtes un contributeur du projet, lorsque vous avez fini de développer, vous pouvez faire une pull request sur la branche `develop` du projet.
+### Vous êtes contributeur ?
+Dans le cas où vous êtes un contributeur du projet, lorsque vous avez fini de développer, vous pouvez faire une pull request sur la branche `develop` du projet.
 
-## Ok et si je veut switcher entre la bibliothèque publiée et la bibliothèque en développement ?
+## Switcher entre bibliothèque publiée et bibliothèque en développement ?
 
 De bibliothèque publiée à dev:
 ```
@@ -149,7 +156,7 @@ ocade-composants
 ```
 
 # Package.json
-A titre de rappel, voici le package.json de la bibliothèque de composants.
+A titre d'information, voici le package.json de la bibliothèque de composants.
 ## Exemple d'un package.json
 ```json
 {
@@ -171,7 +178,7 @@ A titre de rappel, voici le package.json de la bibliothèque de composants.
     "build-storybook": "build-storybook -o storybook-static"
   },
   "keywords": [
-    "Ocade Components"
+    "Ocade Composants"
   ],
   "author": "",
   "license": "ISC",
