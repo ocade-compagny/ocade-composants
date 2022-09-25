@@ -8,101 +8,153 @@
 
 [![Documentation](https://img.shields.io/badge/documentation-voir-blue.svg)](https://ocade-compagny.github.io/ocade-composants/)
 
+
+
+
+## Ocade Composants, qu'est-ce que c'est ?
+[Ocade Composants](https://github.com/ocade-compagny/ocade-composants) est une bibliothèque de composants React. Elle est destinée à être utilisée dans les applications développées par [Ocade Compagny](https://github.com/ocade-compagny/create-ocade-system) mais peut être utilisée dans n'importe qu'elle project utilisant React.
+
+
+## Installation 
+Pour installer cette bibliothèque de composants dans votre projet, vous devez l'installer via npm ou yarn.
+
+```bash
+npm install @ocade-compagny/ocade-composants
+```
+
+* Ou via yarn
+```bash
+yarn add @ocade-compagny/ocade-composants
+```
+
+
+## Utilisation
+L'utilisation de cette bibliothèque de composants est très simple. Il suffit d'importer le composant que vous souhaitez utiliser dans votre projet.
+
+```javascript
+import { Button } from '@ocade-compagny/ocade-composants';
+
+const App = () => {
+  return (
+    <Button>Mon bouton</Button>
+  );
+}
+```
+
+## Développement 
+Si vous souhaitez contribuer à cette bibliothèque de composants, vous pouvez cloner le projet dans votre dossier de travail. Voici les étapes à suivre pour réussir à développer la librarie.
+
+1. Installer la bibliothèque @ocade-compagny/ocade-composants dans votre application
+```bash
+npm install @ocade-compagny/ocade-composants
+```
+
+2. Cloner le dépôt @ocade-composants dans votre dossier de travail
+* Avec SSH:
+```bash
+git clone git@github.com:ocade-compagny/ocade-composants.git
+```
+
+* Avec HTTPS:
+```bash
+git clone https://github.com/ocade-compagny/ocade-composants.git
+```
+
+3. Faire pointer le package @ocade-compagny/ocade-composants vers le dossier de votre dépôt cloné. Dans le fichier package.json de votre application, modifier la ligne suivante:
+```json
+"dependencies": {
+  ...,
+  "@ocade-compagny/ocade-composants": "x.x.x",
+  ...,
+}
+```
+par
+```json
+"dependencies": {
+  ...,
+  "@ocade-compagny/ocade-composants": "file:ocade-composants",
+  ...,
+}
+```
+où `ocade-composants` est le dossier de votre dépôt cloné.
+
+2. Installer les dépendances de la bibliothèque @ocade-compagny/ocade-composants
+```bash
+cd ocade-composants && npm install
+```
+
+Concraitement, vous pouvez maintenant développer dans le dossier cloné et lorsque vous voulez voir vos résultats dans votre application React, vous avez simplement à build la librairie avec la commande 
+```
+npm run build
+```
+
+### Nodemon pour vous aider
+Si vous souhaitez developper sans avoir à relancer la commande `npm run build` a chaque fois, vous pouvez lancer le serveur nodemon qui surveillera les changements pour vous
+```
+npm run dev
+```
+
+### Dans le cas où vous êtes un contributeur du projet, lorsque vous avez fini de développer, vous pouvez faire une pull request sur la branche `develop` du projet.
+
+## Ok et si je veut switcher entre la bibliothèque publiée et la bibliothèque en développement ?
+
+De bibliothèque publiée à dev:
+```
+npm unstall --save-dev @ocade-compagny/ocade-composants
+npm install --save-dev file:ocade-composants
+```
+
+De dev à bibliothèque publiée:
+```
+npm unstall --save-dev file:ocade-composants
+npm install --save-dev @ocade-compagny/ocade-composants
+```
+
+# Structure de la bibliothèque
+La bibliothèque est composée de plusieurs dossiers et fichiers. Voici la structure de la bibliothèque.
+
+```
+ocade-composants
+├── .github  # Fichiers de configuration pour github, contient des workflows pour publier la documentation sur github pages et incrémentter la version du package.
+├── .husky   # Fichiers de configuration pour husky, permet de lancer des scripts avant de faire un commit ou un push.
+├── .storybook  # Fichiers de configuration pour storybook (documentation de composants).
+├── .vscode  # Fichiers de configuration pour vscode
+├── coverage  # Résultats de la couverture de code (test unitaires)
+├── dist # Fichiers de la bibliothèque compilée (c'est le dossier servit par npm)
+├── node_modules  # Dossier des dépendances de la bibliothèque
+├── readme # Images pour le readme
+├── src # Dossier des sources de la bibliothèque
+│   ├── components # Dossier des composants
+│   │   ├── Button # Dossier du composant Button
+│   │   │   ├── Button.tsx  # Fichier du composant Button
+│   │   │   ├── Button.test.tsx # Fichier de test unitaire du composant Button
+│   │   ├── index.ts  # Fichier d'export du composant Button et les autres composants du dossier
+│   ├── index.ts  # Fichier d'export des composants général
+│   ├── scss # Dossier des styles
+│   │   ├── main.scss # Fichier des variables de styles et import des styles des composants
+│   │   ├── Button.scss # Fichier des styles du composant Button
+│   ├── stories # Dossier des stories de storybook
+│   │   ├── Button.stories.tsx # Fichier des stories du composant Button
+├── storybook-static # Fichiers de la documentation de storybook
+├── .eslintrc.json # Fichier de configuration pour eslint
+├── .gitignore # Fichier de configuration pour git
+├── .stylintrc.json # Fichier de configuration pour stylelint
+├── babel.config.js # Fichier de configuration pour babel
+├── jest.config.js # Fichier de configuration pour jest
+├── package.json # Fichier de configuration pour npm
+├── package-lock.json # Fichier de configuration pour npm
+├── README.md # Fichier de documentation du projet
+├── rollup.config.js # Fichier de configuration pour rollup (compile la bibliothèque)
+├── .tsconfig.json # Fichier de configuration pour typescript
+```
+
 # Package.json
-
-Différentes bonnes pratiques pour la gestion des paquets via npm.
-
-## Changer de version un paquet en développement
-
-En gros l'idée c'est d'utiliser `npm install` ou `npm uninstall` avec l'option `--no-save-dev` pour faire des (dés-)installations de paquets et d'installer ta bibliothèque en utilisant le dépôt local plutôt que le paquet npm, à volonté, sans que ça modifie ton package.json (qui lui est versionné et donc utilisé pour le déploiement, donc pas reposer sur un truc local). La commande `npm update` remet tout au clair. 
-
-Exemple imaginaire avec `atob`
-
-### Prod
-
-En prod, atob est un paquet installé via npm de façon classique :
-
-Le code source en node js est plus ou moins celui-là :
-
-```
-function atob(str) {
-  return Buffer.from(str, 'base64').toString('binary');
-}
-```
-
-Le package.json est en gros : 
-
-```
-{
-  "name": "npm-tests",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "atob": "^2.1.2"
-  }
-}
-```
-
-#### Procédure pour passer en prod
-
-Si c'est une "fresh install", rien de spécial. Un `npm ci` devrait suffire.
-
-Si le projet a été en dev et qu'on veut basculer en prod : `npm update`.
-
-### Dev
-
-En dev, on veut une variante de notre fonction `atob` : 
-
-```
-function atob(str) {
-  return str;
-}
-```
-
-On a donc exactement le même paquet, sous `/lib/atob` au lieu du classique `node_modules`.
-Ce dossier est le dépôt de travail cloné. On modifie le fichier approprié et
-on modifie la fonction.
-
-**On ne touche pas au fichier package.json.**
-Cela permet de travailler sur un fichier package.json qui est toujours "propre".
-
-#### Procédure pour passer en dev
-
-```
-[clement@clement-gco npm-tests]$ node index.js 
-function atob(str) {
-  return Buffer.from(str, 'base64').toString('binary');
-}
-[clement@clement-gco npm-tests]$ npm uninstall --no-save atob && npm install --no-save atob@file:./lib/atob
-
-removed 1 package, and audited 1 package in 177ms
-
-found 0 vulnerabilities
-
-added 1 package, and audited 3 packages in 11s
-
-found 0 vulnerabilities
-[clement@clement-gco npm-tests]$ node index.js 
-function atob(str) {
-  return str;
-}
-```
-
-En vrai c'est une seule commande : 
-
-```
-npm uninstall --no-save atob && npm install --no-save atob@file:./lib/atob
-```
-
-(L'exéuction de `node index.js` n'est là que pour montrer si on est en prod ou en dev.)
-
-
-### Exemple d'un package.json
-```
+A titre de rappel, voici le package.json de la bibliothèque de composants.
+## Exemple d'un package.json
+```json
 {
   "name": "@ocade-compagny/ocade-composants",
-  "version": "1.0.1",
+  "version": "1.0.64",
   "description": "Banque de composants by Ocade Compagny",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -112,10 +164,11 @@ npm uninstall --no-save atob && npm install --no-save atob@file:./lib/atob
     "eslint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.mjs --resolve-plugins-relative-to .",
     "stylelint": "stylelint --fix \"src/**/*.scss\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "build": "rollup -c",
     "dev": "nodemon -e ts,tsx -w ./src -x npm run build",
-    "deploy-storybook": "storybook-to-ghpages"
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook -o storybook-static"
   },
   "keywords": [
     "Ocade Components"
@@ -127,8 +180,6 @@ npm uninstall --no-save atob && npm install --no-save atob@file:./lib/atob
     "@babel/preset-env": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
-    "babel-jest": "^29.0.3",
-    "babel-loader": "^8.2.5",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
@@ -144,11 +195,14 @@ npm uninstall --no-save atob && npm install --no-save atob@file:./lib/atob
     "@storybook/react": "^6.5.12",
     "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/testing-library": "^0.0.13",
+    "gh-pages": "^4.0.0",
     "@types/jest": "^29.0.3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "babel-jest": "^29.0.3",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "eslint": "^8.23.1",
     "eslint-config-standard-with-typescript": "^23.0.0",
@@ -181,14 +235,14 @@ npm uninstall --no-save atob && npm install --no-save atob@file:./lib/atob
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ocade-compagny/ocade-components.git"
+    "url": "git+https://github.com/ocade-compagny/ocade-composants.git"
   },
   "bugs": {
-    "url": "https://github.com/ocade-compagny/ocade-components/issues"
+    "url": "https://github.com/ocade-compagny/ocade-composants/issues"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/ocade-compagny/ocade-components#readme"
+  "homepage": "https://github.com/ocade-compagny/ocade-composants#readme"
 }
 ```
