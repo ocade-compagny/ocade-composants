@@ -5,20 +5,19 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   variant: `contained` | `outlined` | `text`
   shape?: boolean
 }
-
 export const Button: React.FC<ButtonProps> = ({
   children,
   variant,
   shape,
   ...props
 }) => {
-  const classNames = `
-    btn 
-    ${ variant ? `btn-${variant}` : `` } 
-    ${ shape ? "btn-rounded" : `` }
-  `;
   return (
-      <button className={classNames} {...props}>
+      <button className={`
+          btn 
+          ${ variant ? `btn-${variant}` : `` } 
+          ${ shape ? "btn-rounded" : `` }
+        `} 
+        {...props}>
         {children}
       </button>
   )

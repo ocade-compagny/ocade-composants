@@ -1,3 +1,6 @@
+@import "../config.scss";
+
 .btn {
-    background-color: red;
+    border-radius: $border-radius;
+    background-color: orange;
 }

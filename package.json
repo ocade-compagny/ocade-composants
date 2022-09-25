@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook -o storybook-static",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build": "rollup -c",
-    "dev": "nodemon -e ts,tsx -w ./src -x npm run build"
+    "dev": "nodemon -e ts,tsx,css,scss -w ./src -x npm run build"
   },
   "keywords": [
     "Components",
@@ -48,6 +48,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.0",
+    "storybook-addon-sass-postcss": "^0.1.3",
     "typescript": "^4.8.3"
   },
   "repository": {
