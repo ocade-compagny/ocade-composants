@@ -1,6 +1,6 @@
 <a href="https://ocade-compagny.github.io/ocade-composants/" title="Click pour voir la documentation">
   <p align="center">
-    <img src="./readme/logo-ocade-composants-1.png" />
+    <img src="./readme/logo-ocade-composants-2.png" />
   </p>
 </a>
 
