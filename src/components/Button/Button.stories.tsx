@@ -13,7 +13,7 @@ export const Contained = Template.bind({})
 Contained.args = {
   children: 'Contained',
   variant: 'contained',
-  shape: true
+  shape: false
 }
 
 export const Outlined = Template.bind({})

@@ -1,1 +1,2 @@
-export * from './components'
+import './components/global.scss';
+export * from './components';
