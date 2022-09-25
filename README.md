@@ -112,7 +112,7 @@ npm install --save-dev @ocade-compagny/ocade-composants
 ```
 
 # Structure de la bibliothèque
-La bibliothèque est composée de plusieurs dossiers et fichiers. Voici la structure de la bibliothèque.
+La bibliothèque est composée de plusieurs dossiers et fichiers. Voici la structure de la bibliothèque. 
 
 ```
 ocade-composants
