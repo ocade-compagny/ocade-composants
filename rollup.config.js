@@ -32,7 +32,9 @@ export default {
       modules: true, // active les modules CSS pour le bundle.
       use: ['sass'], // indique au plugin d'activer le support Sass. Vous devez également installer node-sassexplicitement dans le projet
     }),
-    babel({ exclude: 'node_modules/**' })
+    babel({ 
+      exclude: 'node_modules/**'
+    })
   ],
   external: ['react', 'react-dom']
 };

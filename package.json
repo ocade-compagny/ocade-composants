@@ -27,12 +27,12 @@
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@storybook/addon-actions": "^6.5.12",
-    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/manager-webpack5": "^6.5.12",
-    "@storybook/react": "^6.5.12",
+    "@storybook/react": "^6.1.21",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.21",
     "babel-loader": "^8.2.5",
@@ -60,5 +60,8 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/ocade-compagny/ocade-composants#readme"
+  "homepage": "https://github.com/ocade-compagny/ocade-composants#readme",
+  "dependencies": {
+    "@ocade-compagny/ocade-composants": "^1.0.73"
+  }
 }
