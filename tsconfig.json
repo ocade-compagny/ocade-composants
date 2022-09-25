@@ -1,8 +1,5 @@
 {
-  "include": [
-      "src/**/*",
-      "./babel.config.js"
-  ],
+  "include": ["src/**/*"],
   "compilerOptions": {
     "module": "esnext",
     "target": "es5",
@@ -18,20 +15,8 @@
     "esModuleInterop": true,
     "baseUrl": "src/",
     "paths": {
-      "common": ["src/common/*"],
-      "components": ["src/components/*"],
-      "hooks": ["src/hooks/*"],
-      "utils": ["src/utils/*"]
+      "components": ["src/components/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest"
-  ],
-  "types": ["typePatches"]
+  "exclude": ["node_modules", "dist"],
 }
