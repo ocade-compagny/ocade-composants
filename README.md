@@ -22,12 +22,6 @@ Vous pouvez installer cette bibliothèque via npm ou yarn.
 npm install @ocade-compagny/ocade-composants
 ```
 
-* Ou via yarn
-```bash
-yarn add @ocade-compagny/ocade-composants
-```
-
-
 ## Utilisation
 L'utilisation de cette bibliothèque de composants est très simple. Il suffit d'importer le composant que vous souhaitez utiliser dans votre projet.
 
@@ -42,10 +36,10 @@ const App = () => {
 ```
 
 ## Comment connaître les composants disponibles ?
-[![Documentation](https://img.shields.io/badge/explorer-documentation-blue.svg)](https://ocade-compagny.github.io/ocade-composants/)
+[![Documentation](https://img.shields.io/badge/explorer-documentation-blue.svg)](https://ocade-compagny.github.io/ocade-composants/) <br/>
 Cliquez sur le lien ci-dessus et vous arrivez sur la documentation de cette bibliothèque de composants. Vous y trouverez la liste des composants disponibles et leur utilisation.
 ![Page Accueil](./readme/storybook-1.png)
-![Page doc du composant](./readme/storybook-1.png)
+![Page doc du composant](./readme/storybook-2.png)
 
 ## Développement 
 Si vous souhaitez contribuer à cette bibliothèque de composants, vous pouvez cloner le projet dans votre dossier de travail.
