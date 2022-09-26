@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook -o storybook-static",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build": "rollup -c",
-    "dev": "nodemon -e ts,tsx,css,scss -w ./src -x npm run build"
+    "dev": "nodemon --ignore dist -e ts,tsx,css,scss -w ./src -x npm run build"
   },
   "keywords": [
     "Components",

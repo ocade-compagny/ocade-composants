@@ -8,36 +8,6 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 var require$$0__default = /*#__PURE__*/_interopDefaultLegacy(require$$0);
 
-function styleInject(css, ref) {
-  if ( ref === void 0 ) ref = {};
-  var insertAt = ref.insertAt;
-
-  if (!css || typeof document === 'undefined') { return; }
-
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var css_248z = ".global_btn__Aj92r {\n  background-color: red; }\n";
-styleInject(css_248z);
-
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -1432,9 +1402,8 @@ function requireReactJsxRuntime_development () {
 } (jsxRuntime));
 
 var Button = function (_a) {
-    var children = _a.children, variant = _a.variant, shape = _a.shape, props = __rest(_a, ["children", "variant", "shape"]);
-    var classNames = "\n    btn \n    ".concat(variant ? "btn-".concat(variant) : "", " \n    ").concat(shape ? "btn-rounded" : "", "\n  ");
-    return (jsxRuntime.exports.jsx("button", __assign({ className: classNames }, props, { children: children })));
+    var variant = _a.variant, shape = _a.shape, icon = _a.icon, children = _a.children, props = __rest(_a, ["variant", "shape", "icon", "children"]);
+    return (jsxRuntime.exports.jsxs("button", __assign({ className: "\n          btn \n          overide\n          ".concat(variant ? "btn-".concat(variant) : "", " \n          ").concat(shape ? "btn-rounded" : "", "\n        ") }, props, { children: [icon && jsxRuntime.exports.jsx("img", { src: icon, alt: "logo" }), children] })));
 };
 
 exports.Button = Button;
