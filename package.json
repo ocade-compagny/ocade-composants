@@ -61,8 +61,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/ocade-compagny/ocade-composants#readme",
-  "dependencies": {
-    "@ocade-compagny/ocade-composants": "^1.0.73"
-  }
+  "homepage": "https://github.com/ocade-compagny/ocade-composants#readme"
 }
